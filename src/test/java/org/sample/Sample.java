@@ -21,6 +21,8 @@ public class Sample {
 		Object parse = jsonParser.parse(fileReader);
 		
 		JSONObject json = (JSONObject) parse;
-		System.out.println(json.toString());
+		System.out.println(json.toString())
+		;
+		
 	}
 }
