@@ -18,7 +18,7 @@ public class SampleAPI {
 		.and()
 		.contentType(ContentType.JSON)
 		.and()
-		.body("id", equalTo(1));
+		.body("id", equalTo(1f));
 
 		String output = RestAssured.get("/users").getBody().asPrettyString();
 		System.out.println(output);
