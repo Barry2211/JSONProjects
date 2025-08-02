@@ -12,6 +12,10 @@ public class GetUrls {
 		String data = given().when().get(URIs.singleUser.getUri()).asPrettyString();
 		System.out.println(data);
 		
-		given().when().get(URIs.userPage.getUri()).then().body("data.find{it.id==7}.first_name", equalTo("Michael"));
+		given().when().get(URIs.userPage.getUri())
+		.then().body(
+				"data.find{it.id==7}.first_name",
+				equalTo("Michael")
+				);
 	}
 }
