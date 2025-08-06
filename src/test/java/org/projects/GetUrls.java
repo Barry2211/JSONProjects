@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.*;
 public class GetUrls {
 	public static void main(String[] args) {
 		RestAssured.baseURI=URIs.reqres.getUri();
-		String data = given().when().get(URIs.singleUser.getUri()).asPrettyString();
+		String data = given().when().get(URIs.singleUser.getUri()+"2").asPrettyString();
 		System.out.println(data);
 		
 		given().when().get(URIs.userPage.getUri())

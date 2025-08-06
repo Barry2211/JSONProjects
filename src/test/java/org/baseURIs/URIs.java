@@ -5,7 +5,7 @@ public enum URIs {
 	jsonplace("https://jsonplaceholder.typicode.com/"),
 	reqres("https://reqres.in/"),
 	reqAuth(new Header("x-api-key","reqres-free-v1")),
-	singleUser("/api/users/2"),
+	singleUser("/api/users/"),
 	userPage("/api/users?page=2");
 	
 	private Header head;
