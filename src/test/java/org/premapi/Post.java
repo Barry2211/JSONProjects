@@ -20,7 +20,7 @@ public class Post {
 			System.out.println(arg);
 		}
 		RestAssured.baseURI="https://reqres.in/";
-		Map<String,String> payload = new HashMap();
+		Map<String,String> payload = new HashMap<>();
 		payload.put("name", "morpheus");
 		payload.put("job","leader");
 		
