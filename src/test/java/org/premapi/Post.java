@@ -21,13 +21,15 @@ public class Post {
 		}
 		RestAssured.baseURI="https://reqres.in/";
 		Map<String,String> payload = new HashMap<>();
-		payload.put("name", "morpheus");
-		payload.put("job","leader");
+		payload.put("name", "morpheus"); // name = morpheus
+		payload.put("job","leader"); // job = leader
 		
 		Response post = RestAssured.given().header(URIs.reqAuth.getHead())
 				.contentType(ContentType.JSON).body(payload)
 		.when().post("api/users");
 		System.out.println(post.asPrettyString());
 		Assert.assertEquals(post.getStatusCode(), 201);
+		// https://reqres.in/api/users?name=morpheus&job=leader
+		
 	}
 }

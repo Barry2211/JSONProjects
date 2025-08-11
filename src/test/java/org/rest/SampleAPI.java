@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
 import static org.hamcrest.Matchers.*;
 
 public class SampleAPI {
@@ -19,9 +21,11 @@ public class SampleAPI {
 		.contentType(ContentType.JSON)
 		.and()
 		.body("id", equalTo(1));
+		
+		
 
-		String output = RestAssured.get("/users").getBody().asPrettyString();
-		System.out.println(output);
+		String output = RestAssured.given().when().get("/users/1").getBody().asPrettyString();
+	//	System.out.println(output);
 
 	}
 }
